@@ -93,16 +93,1242 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         const tickers = {
-            "SBER": {"lot_size": 10, "price_step": 0.01, "StepCost": 0.1},
-            "MTLR": {"lot_size": 10, "price_step": 0.01, "StepCost": 0.1},
-            "AFKS": {"lot_size": 100, "price_step": 0.001, "StepCost": 0.1},
-            "MOEX": {"lot_size": 10, "price_step": 0.01, "StepCost": 0.1},
-            "WUSH": {"lot_size": 10, "price_step": 0.01, "StepCost": 0.1},
-            "APTK": {"lot_size": 10, "price_step": 0.002, "StepCost": 0.02},
-            "RNFT": {"lot_size": 10, "price_step": 0.01, "StepCost": 0.1},
-            "SGZH": {"lot_size": 10, "price_step": 0.01, "StepCost": 0.1},
-            "MVID": {"lot_size": 10, "price_step": 0.01, "StepCost": 0.1}
-        };
+    "MTLR": {
+        "LotSize": 1.0,
+        "PriceStep": 0.01,
+        "StepCost": 0.01
+    },
+    "VTBR": {
+        "LotSize": 1.0,
+        "PriceStep": 0.01,
+        "StepCost": 0.01
+    },
+    "WUSH": {
+        "LotSize": 1.0,
+        "PriceStep": 0.01,
+        "StepCost": 0.01
+    },
+    "APTK": {
+        "LotSize": 10.0,
+        "PriceStep": 0.002,
+        "StepCost": 0.02
+    },
+    "ELMT": {
+        "LotSize": 1000.0,
+        "PriceStep": 2e-05,
+        "StepCost": 0.02
+    },
+    "ETLN": {
+        "LotSize": 1.0,
+        "PriceStep": 0.02,
+        "StepCost": 0.02
+    },
+    "ASTR": {
+        "LotSize": 1.0,
+        "PriceStep": 0.05,
+        "StepCost": 0.05
+    },
+    "CARM": {
+        "LotSize": 100.0,
+        "PriceStep": 0.0005,
+        "StepCost": 0.05
+    },
+    "DELI": {
+        "LotSize": 1.0,
+        "PriceStep": 0.05,
+        "StepCost": 0.05
+    },
+    "ENPG": {
+        "LotSize": 1.0,
+        "PriceStep": 0.05,
+        "StepCost": 0.05
+    },
+    "EUTR": {
+        "LotSize": 1.0,
+        "PriceStep": 0.05,
+        "StepCost": 0.05
+    },
+    "GLTR": {
+        "LotSize": 1.0,
+        "PriceStep": 0.05,
+        "StepCost": 0.05
+    },
+    "IRAO": {
+        "LotSize": 100.0,
+        "PriceStep": 0.0005,
+        "StepCost": 0.05
+    },
+    "IVAT": {
+        "LotSize": 1.0,
+        "PriceStep": 0.05,
+        "StepCost": 0.05
+    },
+    "MAGN": {
+        "LotSize": 10.0,
+        "PriceStep": 0.005,
+        "StepCost": 0.05
+    },
+    "MGKL": {
+        "LotSize": 100.0,
+        "PriceStep": 0.0005,
+        "StepCost": 0.05
+    },
+    "PRMD": {
+        "LotSize": 1.0,
+        "PriceStep": 0.05,
+        "StepCost": 0.05
+    },
+    "ROSN": {
+        "LotSize": 1.0,
+        "PriceStep": 0.05,
+        "StepCost": 0.05
+    },
+    "RUAL": {
+        "LotSize": 10.0,
+        "PriceStep": 0.005,
+        "StepCost": 0.05
+    },
+    "SIBN": {
+        "LotSize": 1.0,
+        "PriceStep": 0.05,
+        "StepCost": 0.05
+    },
+    "SVET": {
+        "LotSize": 1.0,
+        "PriceStep": 0.05,
+        "StepCost": 0.05
+    },
+    "SVETP": {
+        "LotSize": 1.0,
+        "PriceStep": 0.05,
+        "StepCost": 0.05
+    },
+    "VSEH": {
+        "LotSize": 1.0,
+        "PriceStep": 0.05,
+        "StepCost": 0.05
+    },
+    "AFKS": {
+        "LotSize": 100.0,
+        "PriceStep": 0.001,
+        "StepCost": 0.1
+    },
+    "AFLT": {
+        "LotSize": 10.0,
+        "PriceStep": 0.01,
+        "StepCost": 0.1
+    },
+    "ALRS": {
+        "LotSize": 10.0,
+        "PriceStep": 0.01,
+        "StepCost": 0.1
+    },
+    "BSPB": {
+        "LotSize": 10.0,
+        "PriceStep": 0.01,
+        "StepCost": 0.1
+    },
+    "CBOM": {
+        "LotSize": 100.0,
+        "PriceStep": 0.001,
+        "StepCost": 0.1
+    },
+    "FESH": {
+        "LotSize": 10.0,
+        "PriceStep": 0.01,
+        "StepCost": 0.1
+    },
+    "FIXP": {
+        "LotSize": 1.0,
+        "PriceStep": 0.1,
+        "StepCost": 0.1
+    },
+    "FLOT": {
+        "LotSize": 10.0,
+        "PriceStep": 0.01,
+        "StepCost": 0.1
+    },
+    "GAZP": {
+        "LotSize": 10.0,
+        "PriceStep": 0.01,
+        "StepCost": 0.1
+    },
+    "GECO": {
+        "LotSize": 10.0,
+        "PriceStep": 0.01,
+        "StepCost": 0.1
+    },
+    "GEMC": {
+        "LotSize": 1.0,
+        "PriceStep": 0.1,
+        "StepCost": 0.1
+    },
+    "HNFG": {
+        "LotSize": 1.0,
+        "PriceStep": 0.1,
+        "StepCost": 0.1
+    },
+    "HYDR": {
+        "LotSize": 1000.0,
+        "PriceStep": 0.0001,
+        "StepCost": 0.1
+    },
+    "KZOSP": {
+        "LotSize": 10.0,
+        "PriceStep": 0.01,
+        "StepCost": 0.1
+    },
+    "LEAS": {
+        "LotSize": 1.0,
+        "PriceStep": 0.1,
+        "StepCost": 0.1
+    },
+    "MDMG": {
+        "LotSize": 1.0,
+        "PriceStep": 0.1,
+        "StepCost": 0.1
+    },
+    "MOEX": {
+        "LotSize": 10.0,
+        "PriceStep": 0.01,
+        "StepCost": 0.1
+    },
+    "MVID": {
+        "LotSize": 1.0,
+        "PriceStep": 0.1,
+        "StepCost": 0.1
+    },
+    "OGKB": {
+        "LotSize": 1000.0,
+        "PriceStep": 0.0001,
+        "StepCost": 0.1
+    },
+    "OKEY": {
+        "LotSize": 10.0,
+        "PriceStep": 0.01,
+        "StepCost": 0.1
+    },
+    "PIKK": {
+        "LotSize": 1.0,
+        "PriceStep": 0.1,
+        "StepCost": 0.1
+    },
+    "POLY": {
+        "LotSize": 1.0,
+        "PriceStep": 0.1,
+        "StepCost": 0.1
+    },
+    "RNFT": {
+        "LotSize": 1.0,
+        "PriceStep": 0.1,
+        "StepCost": 0.1
+    },
+    "RTKM": {
+        "LotSize": 10.0,
+        "PriceStep": 0.01,
+        "StepCost": 0.1
+    },
+    "SBER": {
+        "LotSize": 10.0,
+        "PriceStep": 0.01,
+        "StepCost": 0.1
+    },
+    "SBERP": {
+        "LotSize": 10.0,
+        "PriceStep": 0.01,
+        "StepCost": 0.1
+    },
+    "SELG": {
+        "LotSize": 10.0,
+        "PriceStep": 0.01,
+        "StepCost": 0.1
+    },
+    "SGZH": {
+        "LotSize": 100.0,
+        "PriceStep": 0.001,
+        "StepCost": 0.1
+    },
+    "SPBE": {
+        "LotSize": 1.0,
+        "PriceStep": 0.1,
+        "StepCost": 0.1
+    },
+    "TATN": {
+        "LotSize": 1.0,
+        "PriceStep": 0.1,
+        "StepCost": 0.1
+    },
+    "TATNP": {
+        "LotSize": 1.0,
+        "PriceStep": 0.1,
+        "StepCost": 0.1
+    },
+    "UGLD": {
+        "LotSize": 1000.0,
+        "PriceStep": 0.0001,
+        "StepCost": 0.1
+    },
+    "ABIO": {
+        "LotSize": 10.0,
+        "PriceStep": 0.02,
+        "StepCost": 0.2
+    },
+    "AGRO": {
+        "LotSize": 1.0,
+        "PriceStep": 0.2,
+        "StepCost": 0.2
+    },
+    "CHMF": {
+        "LotSize": 1.0,
+        "PriceStep": 0.2,
+        "StepCost": 0.2
+    },
+    "CIAN": {
+        "LotSize": 1.0,
+        "PriceStep": 0.2,
+        "StepCost": 0.2
+    },
+    "EELT": {
+        "LotSize": 10.0,
+        "PriceStep": 0.02,
+        "StepCost": 0.2
+    },
+    "ELFV": {
+        "LotSize": 1000.0,
+        "PriceStep": 0.0002,
+        "StepCost": 0.2
+    },
+    "FEES": {
+        "LotSize": 10000.0,
+        "PriceStep": 2e-05,
+        "StepCost": 0.2
+    },
+    "GMKN": {
+        "LotSize": 10.0,
+        "PriceStep": 0.02,
+        "StepCost": 0.2
+    },
+    "KLVZ": {
+        "LotSize": 100.0,
+        "PriceStep": 0.002,
+        "StepCost": 0.2
+    },
+    "LSRG": {
+        "LotSize": 1.0,
+        "PriceStep": 0.2,
+        "StepCost": 0.2
+    },
+    "MRKC": {
+        "LotSize": 1000.0,
+        "PriceStep": 0.0002,
+        "StepCost": 0.2
+    },
+    "MRKK": {
+        "LotSize": 10.0,
+        "PriceStep": 0.02,
+        "StepCost": 0.2
+    },
+    "NKNCP": {
+        "LotSize": 10.0,
+        "PriceStep": 0.02,
+        "StepCost": 0.2
+    },
+    "NLMK": {
+        "LotSize": 10.0,
+        "PriceStep": 0.02,
+        "StepCost": 0.2
+    },
+    "NVTK": {
+        "LotSize": 1.0,
+        "PriceStep": 0.2,
+        "StepCost": 0.2
+    },
+    "POSI": {
+        "LotSize": 1.0,
+        "PriceStep": 0.2,
+        "StepCost": 0.2
+    },
+    "PRFN": {
+        "LotSize": 100.0,
+        "PriceStep": 0.002,
+        "StepCost": 0.2
+    },
+    "QIWI": {
+        "LotSize": 1.0,
+        "PriceStep": 0.2,
+        "StepCost": 0.2
+    },
+    "RBCM": {
+        "LotSize": 100.0,
+        "PriceStep": 0.002,
+        "StepCost": 0.2
+    },
+    "RENI": {
+        "LotSize": 10.0,
+        "PriceStep": 0.02,
+        "StepCost": 0.2
+    },
+    "RGSS": {
+        "LotSize": 1000.0,
+        "PriceStep": 0.0002,
+        "StepCost": 0.2
+    },
+    "ROLO": {
+        "LotSize": 1000.0,
+        "PriceStep": 0.0002,
+        "StepCost": 0.2
+    },
+    "SFIN": {
+        "LotSize": 1.0,
+        "PriceStep": 0.2,
+        "StepCost": 0.2
+    },
+    "SOFL": {
+        "LotSize": 10.0,
+        "PriceStep": 0.02,
+        "StepCost": 0.2
+    },
+    "TGKA": {
+        "LotSize": 100000.0,
+        "PriceStep": 2e-06,
+        "StepCost": 0.2
+    },
+    "TRMK": {
+        "LotSize": 10.0,
+        "PriceStep": 0.02,
+        "StepCost": 0.2
+    },
+    "VKCO": {
+        "LotSize": 1.0,
+        "PriceStep": 0.2,
+        "StepCost": 0.2
+    },
+    "AQUA": {
+        "LotSize": 1.0,
+        "PriceStep": 0.5,
+        "StepCost": 0.5
+    },
+    "BANE": {
+        "LotSize": 1.0,
+        "PriceStep": 0.5,
+        "StepCost": 0.5
+    },
+    "BANEP": {
+        "LotSize": 1.0,
+        "PriceStep": 0.5,
+        "StepCost": 0.5
+    },
+    "BLNG": {
+        "LotSize": 100.0,
+        "PriceStep": 0.005,
+        "StepCost": 0.5
+    },
+    "DIAS": {
+        "LotSize": 1.0,
+        "PriceStep": 0.5,
+        "StepCost": 0.5
+    },
+    "GCHE": {
+        "LotSize": 1.0,
+        "PriceStep": 0.5,
+        "StepCost": 0.5
+    },
+    "GEMA": {
+        "LotSize": 10.0,
+        "PriceStep": 0.05,
+        "StepCost": 0.5
+    },
+    "KUZB": {
+        "LotSize": 10000.0,
+        "PriceStep": 5e-05,
+        "StepCost": 0.5
+    },
+    "LENT": {
+        "LotSize": 1.0,
+        "PriceStep": 0.5,
+        "StepCost": 0.5
+    },
+    "LKOH": {
+        "LotSize": 1.0,
+        "PriceStep": 0.5,
+        "StepCost": 0.5
+    },
+    "LSNGP": {
+        "LotSize": 10.0,
+        "PriceStep": 0.05,
+        "StepCost": 0.5
+    },
+    "MBNK": {
+        "LotSize": 1.0,
+        "PriceStep": 0.5,
+        "StepCost": 0.5
+    },
+    "MGNT": {
+        "LotSize": 1.0,
+        "PriceStep": 0.5,
+        "StepCost": 0.5
+    },
+    "MRKV": {
+        "LotSize": 10000.0,
+        "PriceStep": 5e-05,
+        "StepCost": 0.5
+    },
+    "MRKY": {
+        "LotSize": 10000.0,
+        "PriceStep": 5e-05,
+        "StepCost": 0.5
+    },
+    "MRKZ": {
+        "LotSize": 10000.0,
+        "PriceStep": 5e-05,
+        "StepCost": 0.5
+    },
+    "MSNG": {
+        "LotSize": 1000.0,
+        "PriceStep": 0.0005,
+        "StepCost": 0.5
+    },
+    "MSRS": {
+        "LotSize": 1000.0,
+        "PriceStep": 0.0005,
+        "StepCost": 0.5
+    },
+    "MSTT": {
+        "LotSize": 10.0,
+        "PriceStep": 0.05,
+        "StepCost": 0.5
+    },
+    "MTLRP": {
+        "LotSize": 10.0,
+        "PriceStep": 0.05,
+        "StepCost": 0.5
+    },
+    "MTSS": {
+        "LotSize": 10.0,
+        "PriceStep": 0.05,
+        "StepCost": 0.5
+    },
+    "NKNC": {
+        "LotSize": 10.0,
+        "PriceStep": 0.05,
+        "StepCost": 0.5
+    },
+    "NMTP": {
+        "LotSize": 100.0,
+        "PriceStep": 0.005,
+        "StepCost": 0.5
+    },
+    "OZON": {
+        "LotSize": 1.0,
+        "PriceStep": 0.5,
+        "StepCost": 0.5
+    },
+    "PLZL": {
+        "LotSize": 1.0,
+        "PriceStep": 0.5,
+        "StepCost": 0.5
+    },
+    "RASP": {
+        "LotSize": 10.0,
+        "PriceStep": 0.05,
+        "StepCost": 0.5
+    },
+    "RTKMP": {
+        "LotSize": 10.0,
+        "PriceStep": 0.05,
+        "StepCost": 0.5
+    },
+    "SLEN": {
+        "LotSize": 100.0,
+        "PriceStep": 0.005,
+        "StepCost": 0.5
+    },
+    "SMLT": {
+        "LotSize": 1.0,
+        "PriceStep": 0.5,
+        "StepCost": 0.5
+    },
+    "SNGS": {
+        "LotSize": 100.0,
+        "PriceStep": 0.005,
+        "StepCost": 0.5
+    },
+    "SNGSP": {
+        "LotSize": 100.0,
+        "PriceStep": 0.005,
+        "StepCost": 0.5
+    },
+    "SVAV": {
+        "LotSize": 1.0,
+        "PriceStep": 0.5,
+        "StepCost": 0.5
+    },
+    "SVCB": {
+        "LotSize": 100.0,
+        "PriceStep": 0.005,
+        "StepCost": 0.5
+    },
+    "TCSG": {
+        "LotSize": 1.0,
+        "PriceStep": 0.5,
+        "StepCost": 0.5
+    },
+    "TRNFP": {
+        "LotSize": 1.0,
+        "PriceStep": 0.5,
+        "StepCost": 0.5
+    },
+    "TTLK": {
+        "LotSize": 1000.0,
+        "PriceStep": 0.0005,
+        "StepCost": 0.5
+    },
+    "UNAC": {
+        "LotSize": 1000.0,
+        "PriceStep": 0.0005,
+        "StepCost": 0.5
+    },
+    "VEON-RX": {
+        "LotSize": 10.0,
+        "PriceStep": 0.05,
+        "StepCost": 0.5
+    },
+    "YAKG": {
+        "LotSize": 10.0,
+        "PriceStep": 0.05,
+        "StepCost": 0.5
+    },
+    "YDEX": {
+        "LotSize": 1.0,
+        "PriceStep": 0.5,
+        "StepCost": 0.5
+    },
+    "ZAYM": {
+        "LotSize": 10.0,
+        "PriceStep": 0.05,
+        "StepCost": 0.5
+    },
+    "ARSA": {
+        "LotSize": 100.0,
+        "PriceStep": 0.01,
+        "StepCost": 1.0
+    },
+    "AVAN": {
+        "LotSize": 1.0,
+        "PriceStep": 1.0,
+        "StepCost": 1.0
+    },
+    "BELU": {
+        "LotSize": 1.0,
+        "PriceStep": 1.0,
+        "StepCost": 1.0
+    },
+    "BISVP": {
+        "LotSize": 100.0,
+        "PriceStep": 0.01,
+        "StepCost": 1.0
+    },
+    "BRZL": {
+        "LotSize": 1.0,
+        "PriceStep": 1.0,
+        "StepCost": 1.0
+    },
+    "DIOD": {
+        "LotSize": 100.0,
+        "PriceStep": 0.01,
+        "StepCost": 1.0
+    },
+    "DVEC": {
+        "LotSize": 1000.0,
+        "PriceStep": 0.001,
+        "StepCost": 1.0
+    },
+    "GTRK": {
+        "LotSize": 10.0,
+        "PriceStep": 0.1,
+        "StepCost": 1.0
+    },
+    "HHRU": {
+        "LotSize": 1.0,
+        "PriceStep": 1.0,
+        "StepCost": 1.0
+    },
+    "INGR": {
+        "LotSize": 1.0,
+        "PriceStep": 1.0,
+        "StepCost": 1.0
+    },
+    "KLSB": {
+        "LotSize": 100.0,
+        "PriceStep": 0.01,
+        "StepCost": 1.0
+    },
+    "KMAZ": {
+        "LotSize": 10.0,
+        "PriceStep": 0.1,
+        "StepCost": 1.0
+    },
+    "KZOS": {
+        "LotSize": 10.0,
+        "PriceStep": 0.1,
+        "StepCost": 1.0
+    },
+    "LSNG": {
+        "LotSize": 100.0,
+        "PriceStep": 0.01,
+        "StepCost": 1.0
+    },
+    "MAGE": {
+        "LotSize": 100.0,
+        "PriceStep": 0.01,
+        "StepCost": 1.0
+    },
+    "MAGEP": {
+        "LotSize": 100.0,
+        "PriceStep": 0.01,
+        "StepCost": 1.0
+    },
+    "MRKP": {
+        "LotSize": 10000.0,
+        "PriceStep": 0.0001,
+        "StepCost": 1.0
+    },
+    "PHOR": {
+        "LotSize": 1.0,
+        "PriceStep": 1.0,
+        "StepCost": 1.0
+    },
+    "PMSB": {
+        "LotSize": 10.0,
+        "PriceStep": 0.1,
+        "StepCost": 1.0
+    },
+    "RUSI": {
+        "LotSize": 10.0,
+        "PriceStep": 0.1,
+        "StepCost": 1.0
+    },
+    "TGKBP": {
+        "LotSize": 100000.0,
+        "PriceStep": 1e-05,
+        "StepCost": 1.0
+    },
+    "TGKN": {
+        "LotSize": 100000.0,
+        "PriceStep": 1e-05,
+        "StepCost": 1.0
+    },
+    "UPRO": {
+        "LotSize": 1000.0,
+        "PriceStep": 0.001,
+        "StepCost": 1.0
+    },
+    "USBN": {
+        "LotSize": 10000.0,
+        "PriceStep": 0.0001,
+        "StepCost": 1.0
+    },
+    "UTAR": {
+        "LotSize": 100.0,
+        "PriceStep": 0.01,
+        "StepCost": 1.0
+    },
+    "VJGZP": {
+        "LotSize": 1.0,
+        "PriceStep": 1.0,
+        "StepCost": 1.0
+    },
+    "ABRD": {
+        "LotSize": 10.0,
+        "PriceStep": 0.2,
+        "StepCost": 2.0
+    },
+    "AKRN": {
+        "LotSize": 1.0,
+        "PriceStep": 2.0,
+        "StepCost": 2.0
+    },
+    "AMEZ": {
+        "LotSize": 100.0,
+        "PriceStep": 0.02,
+        "StepCost": 2.0
+    },
+    "CHGZ": {
+        "LotSize": 10.0,
+        "PriceStep": 0.2,
+        "StepCost": 2.0
+    },
+    "CNTL": {
+        "LotSize": 100.0,
+        "PriceStep": 0.02,
+        "StepCost": 2.0
+    },
+    "CNTLP": {
+        "LotSize": 100.0,
+        "PriceStep": 0.02,
+        "StepCost": 2.0
+    },
+    "HIMCP": {
+        "LotSize": 100.0,
+        "PriceStep": 0.02,
+        "StepCost": 2.0
+    },
+    "JNOSP": {
+        "LotSize": 100.0,
+        "PriceStep": 0.02,
+        "StepCost": 2.0
+    },
+    "KAZT": {
+        "LotSize": 10.0,
+        "PriceStep": 0.2,
+        "StepCost": 2.0
+    },
+    "KGKC": {
+        "LotSize": 10.0,
+        "PriceStep": 0.2,
+        "StepCost": 2.0
+    },
+    "KGKCP": {
+        "LotSize": 10.0,
+        "PriceStep": 0.2,
+        "StepCost": 2.0
+    },
+    "KMEZ": {
+        "LotSize": 1.0,
+        "PriceStep": 2.0,
+        "StepCost": 2.0
+    },
+    "KRKOP": {
+        "LotSize": 100.0,
+        "PriceStep": 0.02,
+        "StepCost": 2.0
+    },
+    "KRSB": {
+        "LotSize": 100.0,
+        "PriceStep": 0.02,
+        "StepCost": 2.0
+    },
+    "KRSBP": {
+        "LotSize": 100.0,
+        "PriceStep": 0.02,
+        "StepCost": 2.0
+    },
+    "KUBE": {
+        "LotSize": 10.0,
+        "PriceStep": 0.2,
+        "StepCost": 2.0
+    },
+    "MGTSP": {
+        "LotSize": 1.0,
+        "PriceStep": 2.0,
+        "StepCost": 2.0
+    },
+    "MRKU": {
+        "LotSize": 10000.0,
+        "PriceStep": 0.0002,
+        "StepCost": 2.0
+    },
+    "NNSBP": {
+        "LotSize": 1.0,
+        "PriceStep": 2.0,
+        "StepCost": 2.0
+    },
+    "PMSBP": {
+        "LotSize": 10.0,
+        "PriceStep": 0.2,
+        "StepCost": 2.0
+    },
+    "ROSB": {
+        "LotSize": 10.0,
+        "PriceStep": 0.2,
+        "StepCost": 2.0
+    },
+    "ROST": {
+        "LotSize": 10.0,
+        "PriceStep": 0.2,
+        "StepCost": 2.0
+    },
+    "RTSBP": {
+        "LotSize": 1000.0,
+        "PriceStep": 0.002,
+        "StepCost": 2.0
+    },
+    "RZSB": {
+        "LotSize": 100.0,
+        "PriceStep": 0.02,
+        "StepCost": 2.0
+    },
+    "STSBP": {
+        "LotSize": 1000.0,
+        "PriceStep": 0.002,
+        "StepCost": 2.0
+    },
+    "TASB": {
+        "LotSize": 1000.0,
+        "PriceStep": 0.002,
+        "StepCost": 2.0
+    },
+    "UKUZ": {
+        "LotSize": 1.0,
+        "PriceStep": 2.0,
+        "StepCost": 2.0
+    },
+    "VJGZ": {
+        "LotSize": 1.0,
+        "PriceStep": 2.0,
+        "StepCost": 2.0
+    },
+    "VLHZ": {
+        "LotSize": 10.0,
+        "PriceStep": 0.2,
+        "StepCost": 2.0
+    },
+    "VRSBP": {
+        "LotSize": 10.0,
+        "PriceStep": 0.2,
+        "StepCost": 2.0
+    },
+    "WTCM": {
+        "LotSize": 100.0,
+        "PriceStep": 0.02,
+        "StepCost": 2.0
+    },
+    "WTCMP": {
+        "LotSize": 100.0,
+        "PriceStep": 0.02,
+        "StepCost": 2.0
+    },
+    "ASSB": {
+        "LotSize": 1000.0,
+        "PriceStep": 0.005,
+        "StepCost": 5.0
+    },
+    "BSPBP": {
+        "LotSize": 100.0,
+        "PriceStep": 0.05,
+        "StepCost": 5.0
+    },
+    "CHMK": {
+        "LotSize": 1.0,
+        "PriceStep": 5.0,
+        "StepCost": 5.0
+    },
+    "DZRD": {
+        "LotSize": 1.0,
+        "PriceStep": 5.0,
+        "StepCost": 5.0
+    },
+    "IRKT": {
+        "LotSize": 100.0,
+        "PriceStep": 0.05,
+        "StepCost": 5.0
+    },
+    "JNOS": {
+        "LotSize": 100.0,
+        "PriceStep": 0.05,
+        "StepCost": 5.0
+    },
+    "KAZTP": {
+        "LotSize": 10.0,
+        "PriceStep": 0.5,
+        "StepCost": 5.0
+    },
+    "KBSB": {
+        "LotSize": 10.0,
+        "PriceStep": 0.5,
+        "StepCost": 5.0
+    },
+    "LNZLP": {
+        "LotSize": 1.0,
+        "PriceStep": 5.0,
+        "StepCost": 5.0
+    },
+    "LVHK": {
+        "LotSize": 100.0,
+        "PriceStep": 0.05,
+        "StepCost": 5.0
+    },
+    "MFGS": {
+        "LotSize": 10.0,
+        "PriceStep": 0.5,
+        "StepCost": 5.0
+    },
+    "MFGSP": {
+        "LotSize": 10.0,
+        "PriceStep": 0.5,
+        "StepCost": 5.0
+    },
+    "MGTS": {
+        "LotSize": 1.0,
+        "PriceStep": 5.0,
+        "StepCost": 5.0
+    },
+    "MRKS": {
+        "LotSize": 10000.0,
+        "PriceStep": 0.0005,
+        "StepCost": 5.0
+    },
+    "NAUK": {
+        "LotSize": 10.0,
+        "PriceStep": 0.5,
+        "StepCost": 5.0
+    },
+    "NFAZ": {
+        "LotSize": 10.0,
+        "PriceStep": 0.5,
+        "StepCost": 5.0
+    },
+    "NKHP": {
+        "LotSize": 10.0,
+        "PriceStep": 0.5,
+        "StepCost": 5.0
+    },
+    "NKSH": {
+        "LotSize": 100.0,
+        "PriceStep": 0.05,
+        "StepCost": 5.0
+    },
+    "NSVZ": {
+        "LotSize": 10.0,
+        "PriceStep": 0.5,
+        "StepCost": 5.0
+    },
+    "RDRB": {
+        "LotSize": 10.0,
+        "PriceStep": 0.5,
+        "StepCost": 5.0
+    },
+    "RTSB": {
+        "LotSize": 1000.0,
+        "PriceStep": 0.005,
+        "StepCost": 5.0
+    },
+    "SAGO": {
+        "LotSize": 1000.0,
+        "PriceStep": 0.005,
+        "StepCost": 5.0
+    },
+    "SAGOP": {
+        "LotSize": 1000.0,
+        "PriceStep": 0.005,
+        "StepCost": 5.0
+    },
+    "SAREP": {
+        "LotSize": 10000.0,
+        "PriceStep": 0.0005,
+        "StepCost": 5.0
+    },
+    "STSB": {
+        "LotSize": 1000.0,
+        "PriceStep": 0.005,
+        "StepCost": 5.0
+    },
+    "TGKB": {
+        "LotSize": 1000000.0,
+        "PriceStep": 5e-06,
+        "StepCost": 5.0
+    },
+    "TNSE": {
+        "LotSize": 1.0,
+        "PriceStep": 5.0,
+        "StepCost": 5.0
+    },
+    "TUZA": {
+        "LotSize": 10.0,
+        "PriceStep": 0.5,
+        "StepCost": 5.0
+    },
+    "VRSB": {
+        "LotSize": 10.0,
+        "PriceStep": 0.5,
+        "StepCost": 5.0
+    },
+    "YRSBP": {
+        "LotSize": 10.0,
+        "PriceStep": 0.5,
+        "StepCost": 5.0
+    },
+    "ZILL": {
+        "LotSize": 1.0,
+        "PriceStep": 5.0,
+        "StepCost": 5.0
+    },
+    "DZRDP": {
+        "LotSize": 1.0,
+        "PriceStep": 10.0,
+        "StepCost": 10.0
+    },
+    "IGSTP": {
+        "LotSize": 1.0,
+        "PriceStep": 10.0,
+        "StepCost": 10.0
+    },
+    "KCHE": {
+        "LotSize": 10000.0,
+        "PriceStep": 0.001,
+        "StepCost": 10.0
+    },
+    "KROT": {
+        "LotSize": 10.0,
+        "PriceStep": 1.0,
+        "StepCost": 10.0
+    },
+    "KROTP": {
+        "LotSize": 10.0,
+        "PriceStep": 1.0,
+        "StepCost": 10.0
+    },
+    "LNZL": {
+        "LotSize": 1.0,
+        "PriceStep": 10.0,
+        "StepCost": 10.0
+    },
+    "MISB": {
+        "LotSize": 100.0,
+        "PriceStep": 0.1,
+        "StepCost": 10.0
+    },
+    "MISBP": {
+        "LotSize": 100.0,
+        "PriceStep": 0.1,
+        "StepCost": 10.0
+    },
+    "MRSB": {
+        "LotSize": 10000.0,
+        "PriceStep": 0.001,
+        "StepCost": 10.0
+    },
+    "NNSB": {
+        "LotSize": 1.0,
+        "PriceStep": 10.0,
+        "StepCost": 10.0
+    },
+    "RKKE": {
+        "LotSize": 1.0,
+        "PriceStep": 10.0,
+        "StepCost": 10.0
+    },
+    "SARE": {
+        "LotSize": 10000.0,
+        "PriceStep": 0.001,
+        "StepCost": 10.0
+    },
+    "TORSP": {
+        "LotSize": 10000.0,
+        "PriceStep": 0.001,
+        "StepCost": 10.0
+    },
+    "UNKL": {
+        "LotSize": 1.0,
+        "PriceStep": 10.0,
+        "StepCost": 10.0
+    },
+    "YKEN": {
+        "LotSize": 10000.0,
+        "PriceStep": 0.001,
+        "StepCost": 10.0
+    },
+    "YKENP": {
+        "LotSize": 10000.0,
+        "PriceStep": 0.001,
+        "StepCost": 10.0
+    },
+    "ZVEZ": {
+        "LotSize": 1000.0,
+        "PriceStep": 0.01,
+        "StepCost": 10.0
+    },
+    "IGST": {
+        "LotSize": 1.0,
+        "PriceStep": 20.0,
+        "StepCost": 20.0
+    },
+    "KRKNP": {
+        "LotSize": 1.0,
+        "PriceStep": 20.0,
+        "StepCost": 20.0
+    },
+    "OMZZP": {
+        "LotSize": 1.0,
+        "PriceStep": 20.0,
+        "StepCost": 20.0
+    },
+    "TASBP": {
+        "LotSize": 10000.0,
+        "PriceStep": 0.002,
+        "StepCost": 20.0
+    },
+    "TORS": {
+        "LotSize": 10000.0,
+        "PriceStep": 0.002,
+        "StepCost": 20.0
+    },
+    "VGSB": {
+        "LotSize": 1000.0,
+        "PriceStep": 0.02,
+        "StepCost": 20.0
+    },
+    "VGSBP": {
+        "LotSize": 1000.0,
+        "PriceStep": 0.02,
+        "StepCost": 20.0
+    },
+    "VSMO": {
+        "LotSize": 1.0,
+        "PriceStep": 20.0,
+        "StepCost": 20.0
+    },
+    "VSYDP": {
+        "LotSize": 1.0,
+        "PriceStep": 20.0,
+        "StepCost": 20.0
+    },
+    "YRSB": {
+        "LotSize": 10.0,
+        "PriceStep": 2.0,
+        "StepCost": 20.0
+    },
+    "CHKZ": {
+        "LotSize": 1.0,
+        "PriceStep": 50.0,
+        "StepCost": 50.0
+    },
+    "KCHEP": {
+        "LotSize": 10000.0,
+        "PriceStep": 0.005,
+        "StepCost": 50.0
+    },
+    "KRKN": {
+        "LotSize": 1.0,
+        "PriceStep": 50.0,
+        "StepCost": 50.0
+    },
+    "URKZ": {
+        "LotSize": 1.0,
+        "PriceStep": 50.0,
+        "StepCost": 50.0
+    },
+    "VSYD": {
+        "LotSize": 1.0,
+        "PriceStep": 50.0,
+        "StepCost": 50.0
+    },
+    "RTGZ": {
+        "LotSize": 1.0,
+        "PriceStep": 100.0,
+        "StepCost": 100.0
+    },
+    "KOGK": {
+        "LotSize": 1.0,
+        "PriceStep": 200.0,
+        "StepCost": 200.0
+    },
+    "PRMB": {
+        "LotSize": 1.0,
+        "PriceStep": 200.0,
+        "StepCost": 200.0
+    }
+};
 
         const situations = ["A+", "A", "B", "C"];
         const situationProbabilities = {
