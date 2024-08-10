@@ -235,6 +235,7 @@
                 feedback.classList.add('correct');
                 playSound('correct.mp3');
                 // updateStatistics();
+				document.getElementById('positionSize').value = '';
                 startNewRound(); // Запуск нового раунда только после правильного ответа
             } else {
                 feedback.textContent = `Неправильный размер позиции. Ожидалось: ${expectedPositionSize}`;
