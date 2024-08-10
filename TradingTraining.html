@@ -1331,6 +1331,13 @@ const tickers = {
 };
 
         const situations = ["A+", "A", "B", "C"];
+        const situationProbabilities = {
+            "A+": 0.05,
+            "A": 0.20,
+            "B": 0.70,
+            "C": 0.05
+        };		
+		
         const risks = [10, 20, 30, 50, 100];
 
         let currentTicker = '';
@@ -1362,9 +1369,19 @@ const tickers = {
         }
 
         function getRandomSituation() {
-            return situations[Math.floor(Math.random() * situations.length)];
-        }
+            const randomValue = Math.random();
+            let cumulativeProbability = 0;
 
+            for (const situation of situations) {
+                cumulativeProbability += situationProbabilities[situation];
+                if (randomValue < cumulativeProbability) {
+                    return situation;
+                }
+            }
+
+            return "B"; // На случай, если что-то пойдет не так
+        }
+		
         function getRandomRisk() {
             return risks[Math.floor(Math.random() * risks.length)];
         }
